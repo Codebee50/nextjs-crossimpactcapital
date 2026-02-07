@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Subtle, low-opacity SVG version for background use -->
+<svg version="1.1" id="Layer_1"
+     xmlns="http://www.w3.org/2000/svg"
+     x="0px" y="0px"
+     viewBox="0 0 5000 2916"
+     style="enable-background:new 0 0 5000 2916;"
+     xml:space="preserve">
+  <g opacity="0.11">
+    <!-- Circles flowing from left to right -->
+
+    <!-- Largest "circle" shape on the left -->
+    <ellipse 
+      cx="800" cy="1800" rx="1000" ry="850"
+      fill="#2563eb"
+    />
+
+    <!-- Large "circle" behind, a bit more centered -->
+    <ellipse 
+      cx="2000" cy="2000" rx="950" ry="780"
+      fill="#6f9bfc"
+    />
+
+    <!-- Medium circle further right -->
+    <ellipse 
+      cx="3200" cy="2200" rx="700" ry="600"
+      fill="#b3cbff"
+    />
+
+    <!-- Smallest circle furthest right -->
+    <ellipse 
+      cx="4200" cy="2500" rx="500" ry="420"
+      fill="#d6e3ff"
+    />
+  </g>
+</svg>
