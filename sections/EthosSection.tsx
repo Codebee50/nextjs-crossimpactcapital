@@ -68,7 +68,7 @@ const EthosSection = () => {
 
                             <div className='flex flex-col gap-2 h-full justify-between p-8 cursor-pointer absolute inset-0 z-10'>
                                 {/* Gray overlay that closes from top to bottom */}
-                                <div className='absolute inset-0 bg-gray-100 -z-10 transition-transform duration-500 ease-in-out origin-top group-hover:scale-y-0'></div>
+                                <div className='absolute inset-0 bg-gray-100 -z-10 transition-transform duration-1000 ease-in-out origin-top group-hover:scale-y-0'></div>
 
                                 <div className='flex flex-row items-center gap-2 justify-between'>
                                     <div className='rounded-full border border-gray-300 group-hover:border-white py-2 px-4 transition-colors duration-500'>
@@ -77,7 +77,7 @@ const EthosSection = () => {
                                         </p>
                                     </div>
 
-                                    <div className='bg-senary group-hover:bg-quinary transition-colors duration-500 text-white rounded-full shrink-0 h-[45px] w-[45px] flex items-center justify-center'>
+                                    <div className='bg-senary group-hover:bg-quinary transition-colors duration-500 text-white group-hover:text-black rounded-full shrink-0 h-[45px] w-[45px] flex items-center justify-center'>
                                         <ethos.Icon className='text-xl' />
                                     </div>
                                 </div>

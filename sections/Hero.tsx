@@ -23,7 +23,7 @@ const Hero = () => {
     return (
         <div className='w-full  relative'>
 
-            <div className='overflow-hidden absolute inset-0 w-full z-0 h-[calc(100vh+300px)] max-h-[1200px] bg-linear-to-b  from-blue-50 via-blue-100/60 to-blue-200'>
+            <div className='overflow-hidden absolute inset-0 w-full z-0 h-[calc(100vh+300px)] max-h-[1000px] bg-linear-to-b  from-blue-50 via-blue-100/60 to-blue-200'>
 
                 <Image src="/plain-abstract.svg" alt="hero" width={1000} height={1000} className='w-full h-full object-cover' />
             </div>
@@ -34,13 +34,14 @@ const Hero = () => {
                     <h1
                         className="
                             font-semibold
-                            text-[72px]
-                            leading-[80px]
+                            text-[60px]
+                            leading-[68px]
                             mt-0
                             mb-0
                             tracking-[-0.125em]
                             font-open-sauce
                             text-center
+                            capitalize
                         "
                         style={{
                             letterSpacing: '-2px',
