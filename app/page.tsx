@@ -4,6 +4,8 @@ import ShowcaseStats from "@/sections/ShowcaseStats";
 import Image from "next/image";
 import EthosSection from "@/sections/EthosSection";
 import FAQ from "@/sections/FAQ";
+import InvestmentFocus from "@/sections/InvestmentFocus";
+import OurInvestmentFocus from "@/sections/OurInvestmentFocus";
 
 export default function Home() {
   return (
@@ -13,10 +15,10 @@ export default function Home() {
       <Hero />
       <ShowcaseStats />
       <EthosSection />
+      {/* <OurInvestmentFocus /> */}
+      <InvestmentFocus />
 
-      <div className="w-full h-screen">
 
-      </div>
 
       <FAQ />
 

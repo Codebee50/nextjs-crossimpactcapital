@@ -27,7 +27,7 @@ const FAQ = () => {
     ];
 
     return (
-        <div className='w-full min-h-screen grid grid-cols-2 gap-10 section-con'>
+        <div className='w-full min-h-screen grid grid-cols-2 gap-10 section-con mt-[100px]'>
             <div className='flex flex-col gap-3'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-senary font-medium'>FREQUENTLY ASKED QUESTIONS</p>

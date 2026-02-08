@@ -13,6 +13,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-senary: #2563eb;
+  /* --color-senary: #2563eb; */
   --color-quinary: #efa410;
 
   /* --color-senary: #0e4e2b; */
@@ -37,6 +38,10 @@ body {
 @layer utilities {
   .section-con {
     @apply w-[95%] max-w-[1250px] mx-auto;
+  }
+
+  .writing-vertical-lr {
+    writing-mode: vertical-lr;
   }
 
   .padding-x {
