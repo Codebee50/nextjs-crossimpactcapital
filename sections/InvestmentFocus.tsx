@@ -6,6 +6,32 @@ import { FaIndustry } from "react-icons/fa";
 import { FaTimeline } from "react-icons/fa6";
 import { FaMoneyBill } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
+import { motion } from "framer-motion";
+
+
+const cardContainerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.13
+        }
+    }
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.97 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { duration: 0.47, ease: [0.32, 1, 0.32, 1] as [number, number, number, number] }
+    }
+};
+
+const iconVariants = {
+    initial: { scale: 0.8, opacity: 0 },
+    animate: { scale: 1, opacity: 1, transition: { duration: 0.45, ease: [0.44, 0, 0.56, 1] as [number, number, number, number] } }
+};
 
 
 const InvestmentFocus = () => {
@@ -16,7 +42,6 @@ const InvestmentFocus = () => {
         "Geographic Focus"
     ];
     const [activeSection, setActiveSection] = useState(sections[0]);
-
 
     const criteriaList = [
         {
@@ -37,26 +62,33 @@ const InvestmentFocus = () => {
         {
             question: "Geographic Focus",
             answer: "We invest in companies based in the U.S.",
-            Icon: MdLocationOn 
+            Icon: MdLocationOn
         }
     ];
 
     return (
-        <div className='w-full  bg-[#0e274e] mt-[100px]'>
-            <div className='section-con py-24 flex flex-col items-start'>
+        <motion.div
+            className='w-full  bg-blue-50/70 mt-[100px]'
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+        >
+            <div className='section-con py-24 flex flex-col items-start w-[50%]'>
+                <motion.div
+                    className='grid grid-cols-2 gap-2'
 
-                <div className='flex flex-col gap-2'>
+                >
                     <h1
                         className="
                             font-semibold
-                            text-[50px]
+                            text-[40px]
                             leading-[58px]
                             mt-0
                             mb-0
                             tracking-[-0.125em]
                             font-open-sauce
                             capitalize
-                            text-white
+                            text-black
                             max-w-[550px]
                         "
                         style={{
@@ -67,49 +99,48 @@ const InvestmentFocus = () => {
                     >
                         Our investment Focus
                     </h1>
-                    <p className='text-white opacity-70 max-w-[680px]'>Cross Impact Capital is focused on investing in category-redefining businesses that seek to address some of the largest disparities among underserved communities, expand economic opportunity, and close significant equity gaps.</p>
-                </div>
+                    <p className='text-black opacity-70 max-w-[680px] font-open-sauce'>Cross Impact Capital is focused on investing in category-redefining businesses that seek to address some of the largest disparities among underserved communities, expand economic opportunity, and close significant equity gaps.</p>
+                </motion.div>
 
-                {/* <div className='w-full flex flex-row items-center justify-between mt-10 gap-5'>
-                    {
-                        sections.map((section, index) => (
-                            <div key={section} className={`flex flex-row items-center justify-center gap-4 cursor-pointer border flex-1 border-gray-300/20 px-4 py-5 font-medium ${activeSection === section ? 'text-black bg-white' : 'text-white bg-transparent'}`} onClick={() => setActiveSection(section)}>
-                                <div className={`rounded-full px-3 w-8 h-8 flex items-center justify-center ${activeSection === section ? 'bg-black text-white' : 'bg-white text-black'}`}>
-                                    <p>{index + 1}</p>
-                                </div>
-
-                                <h2>{section}</h2>
-                            </div>
-                        ))
-                    }
-
-                </div> */}
-
-
-                <div className='grid grid-cols-4 mt-[90px] gap-10'>
+                <motion.div
+                    className='grid grid-cols-4 mt-[50px] gap-2'
+                    variants={cardContainerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.25 }}
+                >
                     {
                         criteriaList.map((item, index) => (
-                            <div key={item.question} className='flex flex-col gap-4'>
-                                <div className='bg-white/10 rounded-full p-2 shrink-0 w-max'>
-
-                                    <div className='bg-white rounded-full p-4 shrink-0 w-max'>
-                                        <item.Icon className='text-2xl text-black' />
-
-                                    </div>
-
-                                </div>
-                                <h1 className='text-xl font-open-sauce font-semibold text-white'>{item.question}</h1>
-                                <p className='text-white opacity-50'>{item.answer}</p>
-                            </div>
+                            <motion.div
+                                key={item.question}
+                                className='flex flex-col gap-4 bg-white px-5 py-8 rounded-lg'
+                                variants={cardVariants}
+                                whileHover={{
+                                    scale: 1.025,
+                                    boxShadow: "0 10px 24px 0px rgba(78,108,186,0.10)",
+                                    zIndex: 2,
+                                    transition: { type: "spring", stiffness: 220, damping: 18 }
+                                }}
+                            >
+                                <motion.div className='bg-white/10 rounded-full p-2 shrink-0 w-max border border-senary/5'>
+                                    <motion.div
+                                        className='bg-white rounded-full p-4 shrink-0 w-max border border-senary/10'
+                                        variants={iconVariants}
+                                        initial="initial"
+                                        animate="animate"
+                                    >
+                                        <item.Icon className='text-xl text-senary' />
+                                    </motion.div>
+                                </motion.div>
+                                <h1 className='text-xl font-open-sauce font-semibold text-black'>{item.question}</h1>
+                                <p className='text-gray-800 opacity-50 font-open-sauce'>{item.answer}</p>
+                            </motion.div>
                         ))
                     }
-
-
-                </div>
-
+                </motion.div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 
