@@ -1,8 +1,27 @@
 @import "tailwindcss";
 
 @import "@fontsource/open-sauce-sans";
+@import "@fontsource/open-sauce-sans/500.css";
 
 @tailwind utilities;
+
+@font-face {
+  src:
+    url("/fonts/FormaDJRVariable-VF-Testing.woff2") format("woff2"),
+    url("/fonts/FormaDJRVariable-VF-Testing.woff") format("woff");
+  font-family: "FormaDJRVariable";
+  font-style: normal;
+  font-weight: 1 900;
+}
+
+@font-face {
+  src:
+    url("/fonts/FormaDJRVariable-Italic-VF-Testing.woff2") format("woff2"),
+    url("/fonts/FormaDJRVariable-Italic-VF-Testing.woff") format("woff");
+  font-family: "FormaDJRVariable";
+  font-style: italic;
+  font-weight: 1 900;
+}
 
 :root {
   --background: #ffffff;
@@ -20,6 +39,7 @@
 
   --font-inter: var(--font-inter);
   --font-open-sauce: "Open Sauce Sans", sans-serif;
+  --font-forma-djr: "FormaDJRVariable", sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -32,7 +52,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter);
+  font-family: var(--font-forma-djr);
 }
 
 @layer utilities {
@@ -58,5 +78,10 @@ body {
 
   .goog-te-gadget .goog-te-combo {
     @apply px-3 py-2 border rounded-lg bg-white;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
   }
 }

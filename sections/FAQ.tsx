@@ -27,11 +27,11 @@ const FAQ = () => {
     ];
 
     return (
-        <div className='w-full min-h-screen grid grid-cols-2 gap-10 section-con mt-[100px]'>
+        <div className='w-full min-h-screen grid grid-cols-2 gap-10 section-con padding-x'>
             <div className='flex flex-col gap-3'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-senary font-medium'>FREQUENTLY ASKED QUESTIONS</p>
-                    <h2 className='text-[40px] font-open-sauce  leading-[48px]'>Quick Answers to Commonly Asked Questions About Cross Impact Capital.</h2>
+                    <h2 className='text-3xl'>Quick Answers to Commonly Asked Questions About Cross Impact Capital.</h2>
 
                 </div>
 

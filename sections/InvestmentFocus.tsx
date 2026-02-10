@@ -81,21 +81,12 @@ const InvestmentFocus = () => {
                     <h1
                         className="
                             font-semibold
-                            text-[40px]
-                            leading-[58px]
-                            mt-0
-                            mb-0
-                            tracking-[-0.125em]
-                            font-open-sauce
+                            text-5xl
+                            font-forma-djr
                             capitalize
                             text-black
                             max-w-[550px]
                         "
-                        style={{
-                            letterSpacing: '-2px',
-                            marginTop: 0,
-                            marginBottom: 0
-                        }}
                     >
                         Our investment Focus
                     </h1>
@@ -113,7 +104,7 @@ const InvestmentFocus = () => {
                         criteriaList.map((item, index) => (
                             <motion.div
                                 key={item.question}
-                                className='flex flex-col gap-4 bg-white px-5 py-8 rounded-lg'
+                                className='flex flex-col gap-2 bg-white px-5 py-6 rounded-lg'
                                 variants={cardVariants}
                                 whileHover={{
                                     scale: 1.025,
@@ -132,7 +123,7 @@ const InvestmentFocus = () => {
                                         <item.Icon className='text-xl text-senary' />
                                     </motion.div>
                                 </motion.div>
-                                <h1 className='text-xl font-open-sauce font-semibold text-black'>{item.question}</h1>
+                                <h1 className='text-xl font-open-sauce font-semibold text-black mt-3'>{item.question}</h1>
                                 <p className='text-gray-800 opacity-50 font-open-sauce'>{item.answer}</p>
                             </motion.div>
                         ))

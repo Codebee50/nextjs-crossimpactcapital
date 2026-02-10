@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { FaStar } from "react-icons/fa6";
 
 
-const Hero = () => {
+const OurHeroSection = () => {
 
     const trustedByClient = [
         {
@@ -31,17 +31,16 @@ const Hero = () => {
 
             <div className='section-con flex flex-col items-center justify-between mt-[150px] z-20'>
 
-                <div className='w-full flex flex-col items-center justify-center z-10'>
+                <div className='w-full flex flex-row gap-2 items-center justify-between z-10'>
                     <h1
                         className="
                             font-medium
-                            text-[60px]
-                            leading-[68px]
+                            text-[55px]
+                            leading-[63px]
                             mt-0
                             mb-0
                             tracking-[-0.125em]
                             font-open-sauce
-                            text-center
                             capitalize
                         "
                         style={{
@@ -52,24 +51,32 @@ const Hero = () => {
                     >
                         Closing opportunity gaps <br /> across wealth and health
                     </h1>
-                    <p className='w-full max-w-[700px] text-center mt-4 opacity-70 text-lg'>
-                        Cross Impact Capital invests in businesses solving wealth and health disparities in underserved communities, driving opportunity and closing equity gaps.
-                    </p>
-                    {/* <p className='w-full max-w-[700px] text-center mt-4 opacity-70 text-lg'>Cross Impact Capital backs visionary founders building tech solutions that reduce disparities in underserved communities while generating strong returns.</p> */}
 
-                    <div className='mt-5'>
-                        <button className='bg-senary  text-white rounded-full flex flex-row items-center gap-2 py-3 pr-2 pl-5 font-medium cursor-pointer  border-b-4 border-blue-900'>
+                    <div>
 
-                            <p>Submit Application</p>
+                        <p className='w-full max-w-[500px] mt-4 opacity-70'>
+                            Cross Impact Capital invests in businesses solving wealth and health disparities in underserved communities, driving opportunity and closing equity gaps.
+                        </p>
 
-                            <div className='w-[35px] h-[35px] rounded-full bg-white flex items-center justify-center text-black'>
-                                <IoArrowForward size={18} />
-                            </div>
+                        <div className='mt-5'>
+                            <button className='bg-senary  text-white rounded-full flex flex-row items-center gap-2 p-1 font-medium cursor-pointer   border-blue-900'>
+
+                                <p className='ml-4'>Submit Application</p>
+
+                                <div className='w-[40px] h-[40px] rounded-full bg-white flex items-center justify-center text-black'>
+                                    <IoArrowForward size={18} />
+                                </div>
 
 
 
-                        </button>
+                            </button>
+                        </div>
+
                     </div>
+
+
+
+
                 </div>
 
                 <div className='w-full h-[600px] bg-white mt-20 z-10 rounded-lg overflow-hidden relative'>
@@ -110,4 +117,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default OurHeroSection
