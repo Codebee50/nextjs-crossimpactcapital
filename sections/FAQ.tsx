@@ -1,30 +1,36 @@
-import React from 'react'
-import { PiCaretDownLight } from "react-icons/pi";
+"use client"
+
+import React, { useState } from 'react'
 import { PiCaretDownBold } from "react-icons/pi";
 import Image from 'next/image';
 import { PiPhoneCall } from "react-icons/pi";
 
 
+const faq = [
+    {
+        question: "What industries are you focused on?",
+        answer: "We are focused on tech-driven businesses within healthcare services and financial services."
+    },
+    {
+        question: "What stage do you focus on?",
+        answer: "Pre-seed and Seed companies that have product in market fit, revenue or pilot contracts with recurring revenue models."
+    },
+    {
+        question: "What check sizes do you write?",
+        answer: "Our average check size is $250-$500k. We can lead. We do reserve capital for follow-on."
+    },
+    {
+        question: "Where do you invest?",
+        answer: "We invest in companies based in the U.S."
+    }
+];
+
+
 const FAQ = () => {
 
-    const faq = [
-        {
-            question: "What industries are you focused on?",
-            answer: "We are focused on tech-driven businesses within healthcare services and financial services."
-        },
-        {
-            question: "What stage do you focus on?",
-            answer: "Pre-seed and Seed companies that have product in market fit, revenue or pilot contracts with recurring revenue models."
-        },
-        {
-            question: "What check sizes do you write?",
-            answer: "Our average check size is $250-$500k. We can lead. We do reserve capital for follow-on."
-        },
-        {
-            question: "Where do you invest?",
-            answer: "We invest in companies based in the U.S."
-        }
-    ];
+    const [activeFaq, setActiveFaq] = useState<number>(0);
+
+
 
     return (
         <div className='w-full  grid md:grid-cols-2 gap-10 section-con padding-x my-[100px]'>
@@ -37,11 +43,24 @@ const FAQ = () => {
 
                 <div className='flex flex-col mt-5 gap-7'>
                     {
-                        faq.map((faq) => (
-                            <div key={faq.question} className='flex flex-row items-center justify-between border-b border-gray-200 py-3 cursor-pointer'>
-                                <h3 className='sm:text-lg text-base'>{faq.question}</h3>
-                                <PiCaretDownBold className='text-senary'  />
+                        faq.map((faq, index) => (
+                            <div key={faq.question} className='border-b border-gray-200 rounded-lg pb-4' onClick={() => setActiveFaq(index)}>
+                                <div className='flex flex-row items-center justify-between  py-3 cursor-pointer'>
+                                    <h3 className='sm:text-lg text-base'>{faq.question}</h3>
+                                    <PiCaretDownBold className={`text-senary transition-transform duration-300 ${activeFaq === index ? 'rotate-180' : 'rotate-0'}`} />
+                                </div>
+                                <div
+                                    className={`grid transition-all duration-300 ease-in-out ${activeFaq === index
+                                        ? 'grid-rows-[1fr] opacity-100'
+                                        : 'grid-rows-[0fr] opacity-0'
+                                        }`}
+                                >
+                                    <div className='overflow-hidden'>
+                                        <p className='text-gray-500 pt-3 pb-1'>{faq.answer}</p>
+                                    </div>
+                                </div>
                             </div>
+
                         ))
                     }
                 </div>
