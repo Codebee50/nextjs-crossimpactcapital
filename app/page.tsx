@@ -7,34 +7,32 @@ import ShowcaseTrusted from "@/sections/ShowcaseTrusted";
 import HeroSection from "@/sections/HeroSection";
 import OurPortfolio from "@/sections/OurPortfolio";
 import PortfolioSection from "@/sections/PortfolioSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen gap-[150px]">
+    <div className="flex flex-col items-center min-h-screen gap-[50px] sm:gap-[70px]">
 
-      {/* <Nav /> */}
       <HeroSection />
-      {/* <HeroSection /> */}
 
-      {/* <OurHeroSection /> */}
-      {/* <Hero /> */}
+
       <ShowcaseTrusted />
 
-      {/* <ShowcaseStats /> */}
       <EthosSection />
-      {/* <OurInvestmentFocus /> */}
-      {/* <InvestmentFocus /> */}
+
+
+      <InvestmentFocus />
+
+
 
       <PortfolioSection />
 
-      {/* <OurPortfolio /> */}
 
 
       <FAQ />
 
-      <div className="w-full h-screen">
-
-      </div>
+ 
+      <Footer />
 
     </div>
   );

@@ -10,6 +10,7 @@ const images = [
     "/images/2151054064.jpg",
     "/images/743.jpg",
     "/images/2149305398.jpg",
+    // "/images/25394.jpg",
 ]
 
 const SLIDE_DURATION = 6000 // total time each slide is visible (ms)
@@ -25,7 +26,7 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <div className='w-full h-dvh bg-black'>
+        <div className='w-full sm:h-dvh h-[90vh] overflow-hidden bg-black relative'>
             <div className='w-full h-full relative overflow-hidden'>
 
                 <AnimatePresence>
@@ -59,13 +60,13 @@ const HeroSection = () => {
             </div>
 
             {/* <div className='absolute inset-0 flex flex-col bg-linear-to-tr from-black to-black via-transparent '> */}
-            <div className='absolute inset-0 flex flex-col bg-radial from-transparent to-black '>
+            <div className='absolute inset-0 flex flex-col bg-radial from-transparent  to-black'>
 
                 <TransparentNav />
 
                 <div className='mt-[100px] flex-1 flex flex-col justify-center section-con padding-x'>
                     <div className='flex flex-col gap-2'>
-                        <h1 className='text-white text-6xl font-medium leading-[1.3] capitalize'>
+                        <h1 className='text-white text-2xl md:text-4xl lg:text-6xl font-medium leading-[1.3] capitalize'>
                             Closing opportunity gaps <br /> across wealth and health.
                         </h1>
                         <p className='text-white opacity-70 max-w-[700px]'>

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { VscMenu } from "react-icons/vsc";
 
 export const TransparentNav = () => {
     const navItems = [
@@ -42,18 +43,18 @@ export const TransparentNav = () => {
     }, [])
 
     return (
-        <div className={`bg-transparent p text-white transition-colors duration-500 ease-in-out  py-4  w-full flex flex-row items-center justify-between fixed top-0  z-50 ${scrolled ? 'bg-white text-black' : ''}`}>
+        <div className={`bg-transparent  text-white transition-colors duration-500 ease-in-out  py-4 w-full flex flex-row items-center justify-between fixed top-0  z-50 ${scrolled ? 'bg-white text-black' : ''}`}>
 
             <div className='flex flex-row items-center justify-between w-full section-con padding-x'>
                 <div className='flex flex-row items-center gap-2'>
-                    <div className='w-[50px] h-[50px] bg-senary rounded-full flex items-center justify-center'>
-                        <Image src="/logoshort.svg" alt="logo" width={30} height={30}  className='invert-100'/>
-
+                    <div className='h-[50px] bg-transparent rounded-full flex items-center justify-center'>
+                        <Image src="/logoshort.svg" alt="logo" width={30} height={30} className={`${scrolled ? '' : 'invert-100'}`} />
                     </div>
-                    <p className={`text-lg font-semibold font-open-sauce ${scrolled ? 'text-black' : 'text-white'}`}>CrossImpact</p>
+
+                    <p className={`sm:text-lg font-semibold font-open-sauce ${scrolled ? 'text-black' : 'text-white'}`}>CrossImpact</p>
                 </div>
 
-                <div className='flex flex-row items-center gap-8 '>
+                <div className='hidden lg:flex flex-row items-center gap-8 '>
                     {navItems.map((item) => (
                         <Link href={item.href} key={item.name} className={`${scrolled ? 'text-black' : 'text-white'}`}>
                             <p >{item.name}</p>
@@ -61,7 +62,7 @@ export const TransparentNav = () => {
                     ))}
                 </div>
 
-                <div className='flex flex-row items-center gap-2'>
+                <div className='flex flex-row items-center gap-2 max-sm:hidden'>
 
                     <div className='border border-gray-200/50 rounded-full p-2'>
                         <Image src="/flags/united-states.png" alt="linkedin" width={20} height={20} />
@@ -73,6 +74,11 @@ export const TransparentNav = () => {
 
 
                     </button>
+
+                </div>
+
+                <div className='lg:hidden'>
+                    <VscMenu className={`text-2xl ${scrolled ? 'text-black' : 'text-white'}`}/>
 
                 </div>
             </div>

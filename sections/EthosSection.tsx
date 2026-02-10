@@ -40,10 +40,10 @@ const EthosSection = () => {
 
 
             <motion.div
-                className='flex flex-row items-center justify-center gap-5 mt-10'
+                className='flex flex-col md:flex-row md:items-center justify-center gap-5 mt-10'
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }} // Ensure animation triggers only once
                 variants={{
                     hidden: {},
                     visible: {
@@ -59,6 +59,7 @@ const EthosSection = () => {
                             key={ethos.title}
                             className='relative h-[550px] group overflow-hidden'
                             initial={{ opacity: 0, y: 40 }}
+                            viewport={{ once: true, amount: 0.2 }} // Ensure animation triggers only once
                             animate="visible"
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ type: "spring", stiffness: 60, damping: 22, delay: idx * 0.15 }}
@@ -76,14 +77,14 @@ const EthosSection = () => {
 
                             <div className='flex flex-col gap-2 h-full justify-between p-8 cursor-pointer absolute inset-0 z-10'>
                                 {/* Gray overlay that closes from top to bottom */}
-                                <motion.div
+                                {/* <motion.div
                                     className='absolute inset-0 bg-gray-50 -z-10 transition-transform duration-1000 ease-in-out origin-top group-hover:scale-y-0'
                                     layout
-                                ></motion.div>
+                                ></motion.div> */}
 
                                 <div className='flex flex-row items-center gap-2 justify-between'>
                                     <div className='rounded-full border border-gray-300 group-hover:border-white py-2 px-4 transition-colors duration-500'>
-                                        <p className='font-medium text-black group-hover:text-white transition-colors duration-500'>
+                                        <p className='font-medium text-white group-hover:text-white transition-colors duration-500'>
                                             {ethos.title}
                                         </p>
                                     </div>
@@ -98,12 +99,12 @@ const EthosSection = () => {
                                 </div>
 
                                 <div className='flex flex-col gap-6'>
-                                    <p className='text-black group-hover:text-white text-lg transition-colors duration-500'>
+                                    <p className='text-white group-hover:text-white text-lg transition-colors duration-500'>
                                         {ethos.description}
                                     </p>
                                     <Link
                                         href="/apply"
-                                        className='flex flex-row items-center gap-2 font-semibold text-black group-hover:text-white transition-colors duration-500 '
+                                        className='flex flex-row items-center gap-2 font-semibold text-white group-hover:text-white transition-colors duration-500 '
                                     >
                                         Apply Now <MdOutlineArrowOutward className='text-xl' />
                                     </Link>

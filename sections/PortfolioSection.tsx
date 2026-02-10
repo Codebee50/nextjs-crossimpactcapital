@@ -1,29 +1,69 @@
-import React from 'react'
+"use client"
+import React, { useRef } from 'react'
 import { clientList } from '@/constants'
 import Image from 'next/image'
+import { IoArrowBackOutline } from "react-icons/io5";
+import { IoArrowForwardOutline } from "react-icons/io5";
 
 const PortfolioSection = () => {
+
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const handleContainerScroll = (direction: 'left' | 'right') => {
+        if (containerRef.current) {
+            if (direction === "left") {
+                containerRef.current.scrollLeft -= containerRef.current.scrollWidth / 3;
+            }
+
+            else if (direction === "right") {
+                containerRef.current.scrollLeft += containerRef.current.scrollWidth / 3;
+            }
+
+            else {
+                containerRef.current.scrollLeft += containerRef.current.scrollWidth / 3;
+            }
+        }
+    }
+
     return (
-        <div className='w-full  section-con padding-x'>
-            <div className='w-full flex flex-col items-center justify-center gap-2 '>
-                <p className='font-medium text-senary'>PORTFOLIO</p>
+        <div className='w-full  section-con padding-x flex flex-col  gap-5 mt-[50px]'>
+            <div className='flex flex-col md:flex-row md:items-center justify-between gap-4'>
+                <div className='flex flex-col '>
+                    {/* <p className='font-medium text-senary'>PORTFOLIO</p> */}
 
-                <p className='text-4xl font-semibold'>{`Companies We've Backed`}</p>
-                <p className='text-gray-500 text-lg'>We proudly serve as an extension of the management teams we invest in.</p>
+                    <p className='sm:text-3xl text-xl font-medium'>{`Companies We've Backed`}</p>
+                    <p className='text-gray-500 max-sm:text-sm'>We proudly serve as an extension of the management teams we invest in.</p>
 
+
+
+                </div>
+
+                <div className='flex flex-row items-center gap-4 max-md:hidden'>
+                    <button onClick={() => handleContainerScroll('left')} className='w-[50px] cursor-pointer h-[50px] rounded-full bg-gray-50 flex items-center justify-center hover:scale-80 transition-all duration-300 ease-in-out'>
+                        <IoArrowBackOutline className='text-black text-2xl' />
+
+                    </button>
+
+                    <button onClick={() => handleContainerScroll('right')} className='w-[50px] cursor-pointer h-[50px] rounded-full bg-gray-50 flex items-center justify-center hover:scale-80 transition-all duration-300 ease-in-out'>
+                        <IoArrowForwardOutline className='text-black text-2xl' />
+
+                    </button>
+                </div>
             </div>
 
-            <div className='w-full flex flex-row items-stretch  overflow-x-scroll gap-4 mt-10 no-scrollbar'>
+
+            <div ref={containerRef} className='w-full flex md:flex-row flex-col items-stretch  overflow-x-scroll gap-4 no-scrollbar sm:mt-10 mt-5 scroll-smooth'>
 
                 {
                     clientList.map((client) => (
-                        <div key={client.name} className='flex flex-col gap-8 border justify-between border-gray-100  bg-gray-50/30 p-4 rounded-t-lg min-w-[300px]'>
+                        <div key={client.name} className='flex flex-col gap-4 border justify-between border-gray-100  bg-gray-50/30 p-4 rounded-t-lg min-w-[300px]'>
                             <Image src={client.image} alt={client.name} width={110} height={110} className='object-cover' />
                             <p className='text-gray-500 text-sm'>{client.description}</p>
 
                             <a
-                                href="#"
-                                className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-gray-900 uppercase hover:text-senary transition-colors duration-200 group"
+                                href={client.url}
+                                target='_blank'
+                                className="inline-flex items-center gap-2 max-sm:text-xs text-sm font-semibold tracking-widest text-gray-900 uppercase hover:text-senary transition-colors duration-200 group"
                             >
                                 View Company
                                 <svg

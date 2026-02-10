@@ -84,4 +84,21 @@ body {
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     scrollbar-width: none; /* Hide scrollbar for Firefox */
   }
+
+
+  @keyframes trusted-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .slide-track {
+    display: flex;
+    gap: 2.5rem; /* same as gap-10 in Tailwind */
+    animation: trusted-scroll 30s linear infinite;
+    width: max-content;
+  }
 }

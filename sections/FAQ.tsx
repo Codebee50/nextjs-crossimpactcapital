@@ -27,11 +27,11 @@ const FAQ = () => {
     ];
 
     return (
-        <div className='w-full min-h-screen grid grid-cols-2 gap-10 section-con padding-x'>
+        <div className='w-full  grid md:grid-cols-2 gap-10 section-con padding-x my-[100px]'>
             <div className='flex flex-col gap-3'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-senary font-medium'>FREQUENTLY ASKED QUESTIONS</p>
-                    <h2 className='text-3xl'>Quick Answers to Commonly Asked Questions About Cross Impact Capital.</h2>
+                    <h2 className='sm:text-3xl text-xl'>Quick Answers to Commonly Asked Questions About Cross Impact Capital.</h2>
 
                 </div>
 
@@ -39,7 +39,7 @@ const FAQ = () => {
                     {
                         faq.map((faq) => (
                             <div key={faq.question} className='flex flex-row items-center justify-between border-b border-gray-200 py-3 cursor-pointer'>
-                                <h3 className='text-lg'>{faq.question}</h3>
+                                <h3 className='sm:text-lg text-base'>{faq.question}</h3>
                                 <PiCaretDownBold className='text-senary'  />
                             </div>
                         ))
@@ -48,11 +48,11 @@ const FAQ = () => {
 
             </div>
 
-            <div className=' h-[700px] bg-gray-100 relative'>
+            <div className=' md:h-[700px] bg-gray-100 relative'>
 
-                <Image src="/images/customer_service.png" alt="faq" width={1000} height={1000} className='w-full h-full object-cover' />
+                <Image src="/images/customer_service.png" alt="faq" width={1000} height={1000} className='w-full h-full object-cover max-sm:h-[400px]' />
 
-                <div className='absolute min-w-[300px]  bg-senary bottom-10 -left-24 flex flex-row items-center gap-5 px-4 py-5 cursor-pointer'>
+                <div className='md:absolute min-w-[300px]  bg-senary bottom-0 md:bottom-10 md:-left-24 flex flex-row items-center gap-5 px-4 py-5 cursor-pointer'>
 
                     <div className='rounded-full bg-white text-black p-4'>
                         <PiPhoneCall className=' text-2xl' />

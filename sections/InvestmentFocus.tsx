@@ -68,20 +68,21 @@ const InvestmentFocus = () => {
 
     return (
         <motion.div
-            className='w-full  bg-blue-50/70 mt-[100px]'
+            className='w-full  bg-blue-50/70 mt-[100px] '
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
         >
-            <div className='section-con py-24 flex flex-col items-start w-[50%]'>
+            <div className='sm:py-24 py-10 flex flex-col items-start section-con padding-x'>
                 <motion.div
-                    className='grid grid-cols-2 gap-2'
+                    className='grid md:grid-cols-2 gap-2 items-center'
 
                 >
                     <h1
                         className="
-                            font-semibold
-                            text-5xl
+                            font-medium
+                            text-xl
+                            sm:text-3xl
                             font-forma-djr
                             capitalize
                             text-black
@@ -90,11 +91,11 @@ const InvestmentFocus = () => {
                     >
                         Our investment Focus
                     </h1>
-                    <p className='text-black opacity-70 max-w-[680px] font-open-sauce'>Cross Impact Capital is focused on investing in category-redefining businesses that seek to address some of the largest disparities among underserved communities, expand economic opportunity, and close significant equity gaps.</p>
+                    <p className='text-black opacity-70 max-w-[680px] font-open-sauce max-sm:text-sm'>Cross Impact Capital is focused on investing in category-redefining businesses that seek to address some of the largest disparities among underserved communities, expand economic opportunity, and close significant equity gaps.</p>
                 </motion.div>
 
                 <motion.div
-                    className='grid grid-cols-4 mt-[50px] gap-2'
+                    className='grid lg:grid-cols-4 sm:grid-cols-2 mt-[50px] gap-2'
                     variants={cardContainerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -120,11 +121,11 @@ const InvestmentFocus = () => {
                                         initial="initial"
                                         animate="animate"
                                     >
-                                        <item.Icon className='text-xl text-senary' />
+                                        <item.Icon className='text-lg text-senary' />
                                     </motion.div>
                                 </motion.div>
-                                <h1 className='text-xl font-open-sauce font-semibold text-black mt-3'>{item.question}</h1>
-                                <p className='text-gray-800 opacity-50 font-open-sauce'>{item.answer}</p>
+                                <h1 className='text-lg font-open-sauce font-semibold text-black mt-3'>{item.question}</h1>
+                                <p className='text-gray-800 opacity-50 font-open-sauce text-sm'>{item.answer}</p>
                             </motion.div>
                         ))
                     }
