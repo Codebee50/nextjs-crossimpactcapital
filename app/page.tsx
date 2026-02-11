@@ -8,6 +8,8 @@ import HeroSection from "@/sections/HeroSection";
 import OurPortfolio from "@/sections/OurPortfolio";
 import PortfolioSection from "@/sections/PortfolioSection";
 import Footer from "@/components/Footer";
+import ContactUs from "@/sections/ContactUs";
+import InvestmentFocusSection from "@/sections/InvestmentFocusSection";
 
 export default function Home() {
   return (
@@ -20,12 +22,16 @@ export default function Home() {
 
       <EthosSection />
 
+      <InvestmentFocusSection />
 
-      <InvestmentFocus />
+
+      {/* <InvestmentFocus /> */}
 
 
 
       <PortfolioSection />
+
+      <ContactUs />
 
 
 

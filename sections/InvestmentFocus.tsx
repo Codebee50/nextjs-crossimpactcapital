@@ -68,10 +68,11 @@ const InvestmentFocus = () => {
 
     return (
         <motion.div
-            className='w-full  bg-blue-50/70 mt-[100px] '
+            className='w-full  bg-blue-50/70 mt-[100px] scroll-mt-[100px]'
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
+            id="investment-focus"
         >
             <div className='sm:py-24 py-10 flex flex-col items-start section-con padding-x'>
                 <motion.div

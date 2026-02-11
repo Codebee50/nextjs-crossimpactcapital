@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { TransparentNav } from '@/components/TransparentNav'
 import { GoArrowRight } from "react-icons/go";
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import LinkButton from '@/components/LinkButton';
 
 const images = [
     "/images/2151054064.jpg",
@@ -26,7 +28,7 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <div className='w-full sm:h-dvh h-[90vh] overflow-hidden bg-black relative'>
+        <div className='w-full sm:h-dvh h-[90vh] overflow-hidden bg-black'>
             <div className='w-full h-full relative overflow-hidden'>
 
                 <AnimatePresence>
@@ -60,7 +62,7 @@ const HeroSection = () => {
             </div>
 
             {/* <div className='absolute inset-0 flex flex-col bg-linear-to-tr from-black to-black via-transparent '> */}
-            <div className='absolute inset-0 flex flex-col bg-radial from-transparent  to-black'>
+            <div className='absolute inset-0 flex flex-col bg-radial from-transparent  to-black '>
 
                 <TransparentNav />
 
@@ -72,12 +74,14 @@ const HeroSection = () => {
                         <p className='text-white opacity-70 max-w-[700px]'>
                             Cross Impact Capital invests in businesses solving wealth and health disparities in underserved communities, driving opportunity and closing equity gaps
                         </p>
-                        <button className='bg-senary w-max flex flex-row items-center gap-4 mt-5 pr-4 text-white font-medium cursor-pointer'>
+                        {/* <Link href="https://airtable.com/appHkxcdcq2a6l03I/pag7UJHX0Mjg9GHKE/form" target="_blank" className='bg-senary w-max flex flex-row items-center gap-4 mt-5 pr-4 text-white font-medium cursor-pointer'>
                             <div className='bg-white py-5 px-4'>
                                 <GoArrowRight className='text-black' />
                             </div>
                             <p>Submit Application</p>
-                        </button>
+                        </Link> */}
+
+                        <LinkButton text="Submit Application" href="https://airtable.com/appHkxcdcq2a6l03I/pag7UJHX0Mjg9GHKE/form" target="_blank" />
                     </div>
                 </div>
 

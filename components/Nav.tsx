@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoArrowForward } from "react-icons/io5";
+import { IoLogoLinkedin } from "react-icons/io5";
 
 
 const Nav = () => {
@@ -53,7 +54,8 @@ const Nav = () => {
                 <div className='flex flex-row items-center gap-2'>
 
                     <div className='border border-gray-200 rounded-full p-2'>
-                        <Image src="/flags/united-states.png" alt="linkedin" width={20} height={20} />
+                        {/* <Image src="/flags/united-states.png" alt="linkedin" width={20} height={20} /> */}
+                        <IoLogoLinkedin className='text-2xl text-senary' />
                     </div>
 
                     <button className='rounded-full flex flex-row items-center gap-2 py-2 px-5 bg-white text-black border border-gray-200 font-medium cursor-pointer'>
