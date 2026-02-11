@@ -52,18 +52,29 @@ const InvestmentFocusSection = () => {
                             height={1000}
                             className='w-full h-full max-h-[500px] object-cover'
                         />
-                        {/* Dark overlay */}
-                        <div className='absolute inset-0 bg-black/40' />
-                        {/* Text overlay */}
-                        <div className='absolute bottom-16 left-8 md:left-16 text-white max-w-lg'>
-                            <div className='flex items-stretch gap-4'>
-                                <div className='w-1 bg-white rounded-full' />
-                                <div>
-                                    <h3 className='text-lg sm:text-2xl md:text-3xl font-semibold mb-2'>{item.title}</h3>
-                                    <p className='text-sm md:text-base text-white/80'>{item.description}</p>
+
+                        <div className='absolute inset-0 bg-black/60 flex flex-col justify-between sm:p-10 p-8'>
+
+                            <div className='bg-white text-black rounded-full p-2 w-max'>
+                                <h3 className='text-lg sm:text-2xl md:text-3xl font-semibold '>{index + 1}</h3>
+                            </div>
+
+                            <div className=' text-white max-w-lg'>
+                                <div className='flex items-stretch gap-4'>
+                                    <div className='w-1 bg-white rounded-full' />
+                                    <div>
+                                        <h3 className='text-lg sm:text-2xl md:text-3xl font-semibold mb-2'>{item.title}</h3>
+                                        <p className='text-sm md:text-base text-white/80'>{item.description}</p>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
+
+
+
+
+
                     </div>
                 ))}
             </div>
