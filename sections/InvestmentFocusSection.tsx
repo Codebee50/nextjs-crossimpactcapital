@@ -29,7 +29,7 @@ const InvestmentFocusSection = () => {
     ]
 
     return (
-        <div className='w-full min-h-screen pt-[100px] relative section-con padding-x'>
+        <div className='w-full min-h-screen pt-[100px] relative section-con padding-x' id="investment-focus">
             <div>
 
             </div>

@@ -28,7 +28,7 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <div className='w-full sm:h-dvh h-[90vh] overflow-hidden bg-black'>
+        <div className='w-full sm:h-dvh h-[90vh] relative  overflow-hidden bg-black'>
             <div className='w-full h-full relative overflow-hidden'>
 
                 <AnimatePresence>
