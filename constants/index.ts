@@ -6,11 +6,12 @@ export const clientList = [
         description: "Parento is a pioneering national insurance-based solution for paid parental empowering companies to support working parents with proactive, tangible paid leave coverage and employee resources.",
     },
     {
-        name: "GreenLyne",
-        image: "/images/clients-logos/greenlyne.png",
-        url: "https://greenlyne.ai/",
-        description: "AI-powered lending platform that helps banks and credit unions underwrite credit-invisible and thin-credit borrowers, unlocking fair mortgage and home equity lending through precision AI trained on 18M+ loans.",
+        name: "SignSpeak",
+        image: "/images/clients-logos/signspeak.png",
+        url: "https://sign-speak.com/",
+        description: "Real-time sign language recognition and production company bridging communication between Deaf/Hard of Hearing and hearing individuals.",
     },
+
     {
         name: "JusticeText",
         image: "/images/clients-logos/justicetext.png",
@@ -24,9 +25,15 @@ export const clientList = [
         description: "A circular economy solution using a matching algorithm and API to enable retailers to donate unsold and returned goods to local nonprofits.",
     },
     {
-        name: "SignSpeak",
-        image: "/images/clients-logos/signspeak.png",
-        url: "https://sign-speak.com/",
-        description: "Real-time sign language recognition and production company bridging communication between Deaf/Hard of Hearing and hearing individuals.",
+        name: "GreenLyne",
+        image: "/images/clients-logos/greenlyne.png",
+        url: "https://greenlyne.ai/",
+        description: "AI-powered lending platform that helps banks and credit unions underwrite credit-invisible and thin-credit borrowers, unlocking fair mortgage and home equity lending through precision AI trained on 18M+ loans.",
     },
+
 ]
+
+
+export const appConfig = {
+    APPLICATION_FORM_LINK: "https://airtable.com/appHkxcdcq2a6l03I/pag7UJHX0Mjg9GHKE/form"
+}

@@ -6,7 +6,8 @@ const ShowcaseTrusted = () => {
 
     return (
         <div className='flex flex-col items-center justify-center section-con gap-9 padding-x'>
-            <h3 className='sm:text-xl text-center font-medium'>Trusted by leading brands around the world</h3>
+            <h3 className='sm:text-xl text-center font-medium'>Backing companies closing critical access gaps</h3>
+            {/* <h3 className='sm:text-xl text-center font-medium'>Trusted by leading brands around the world</h3> */}
 
             <div className="slider overflow-hidden w-full flex justify-start">
                 <div className="slide-track gap-10 flex flex-row items-center">

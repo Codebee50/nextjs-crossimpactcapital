@@ -3,28 +3,30 @@ import Image from 'next/image'
 import { GoArrowRight } from 'react-icons/go'
 import Link from 'next/link'
 import LinkButton from '@/components/LinkButton'
+import { appConfig } from '@/constants'
 
 const InvestmentFocusSection = () => {
     const investments = [
         {
             title: "Industries We Focus On",
-            description: "We are focused on tech-driven businesses within healthcare services and financial services.",
+            description: "We are focused on tech-enabled solutions within healthcare services and financial services.",
             image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200",
         },
         {
             title: "Investment Stage",
-            description: "Pre-seed and Seed companies that have product in market fit, revenue or pilot contracts with recurring revenue models.",
+            description: "Pre-seed and Seed companies on a clear path to product-market fit, showing early revenue traction or contracted pilots with recurring revenue models.",
             image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200",
         },
         {
             title: "Typical Investment Size",
-            description: "Our average check size is $250-$500k. We can lead. We do reserve capital for follow-on.",
+            description: "Our average check size is $250-$500k. We do reserve capital for follow-on.",
             image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200",
         },
         {
             title: "Geographic Focus",
             description: "We invest in companies based in the U.S.",
-            image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=1200",
+            image: "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            // image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=1200",
         }
     ]
 
@@ -85,7 +87,7 @@ const InvestmentFocusSection = () => {
                 <p className='text-gray-500 mt-4'>Lets build something great together.</p>
 
 
-                <LinkButton text="Submit Application" href="https://airtable.com/appHkxcdcq2a6l03I/pag7UJHX0Mjg9GHKE/form" target="_blank" variant='outline' />
+                <LinkButton text="Submit Application" href={appConfig.APPLICATION_FORM_LINK} target="_blank" variant='outline' />
             </div>
         </div>
     )

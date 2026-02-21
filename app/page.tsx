@@ -1,11 +1,8 @@
-import Nav from "@/components/Nav";
 import EthosSection from "@/sections/EthosSection";
 import FAQ from "@/sections/FAQ";
-import InvestmentFocus from "@/sections/InvestmentFocus";
 import ShowcaseTrusted from "@/sections/ShowcaseTrusted";
 
 import HeroSection from "@/sections/HeroSection";
-import OurPortfolio from "@/sections/OurPortfolio";
 import PortfolioSection from "@/sections/PortfolioSection";
 import Footer from "@/components/Footer";
 import ContactUs from "@/sections/ContactUs";
@@ -24,20 +21,15 @@ export default function Home() {
 
       <InvestmentFocusSection />
 
-
-      {/* <InvestmentFocus /> */}
-
-
-
       <PortfolioSection />
 
       <ContactUs />
 
 
 
-      <FAQ />
+      {/* <FAQ /> */}
 
- 
+
       <Footer />
 
     </div>

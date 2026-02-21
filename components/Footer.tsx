@@ -32,7 +32,7 @@ const Footer = () => {
 
                 {/* Right - Newsletter */}
                 <div className="flex-1 flex flex-col gap-4 min-w-[280px]">
-                    <p className="text-sm mb-3 max-w-[320px]">Stay connected through our ongoing newsletter, Memphis on Mars.</p>
+                    <p className="text-sm mb-3 max-w-[320px]">Stay connected through our ongoing newsletter, CrossRoads.</p>
                     <form className="flex flex-row gap-2 max-w-[350px]">
                         <input
                             type="email"

@@ -8,18 +8,19 @@ import Link from 'next/link';
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import { appConfig } from '@/constants';
 
 const EthosSection = () => {
     const ethos = [
         {
             title: "Innovation Focus",
-            description: "Supporting solutions in technology and healthcare services closing the equity gap.",
+            description: "Supporting solutions in financial and healthcare services closing opportunity gaps",
             Icon: RiFocus2Fill,
             backgroundImage: "/images/ethos/1.jpg"
         },
         {
             title: "Sustainable Impact",
-            description: "Creating measurable and lasting change in underserved communities.",
+            description: "Creating measurable and lasting change in overlooked communities.",
             Icon: PiPottedPlantFill,
             backgroundImage: "/images/ethos/2.jpg"
         },
@@ -99,14 +100,15 @@ const EthosSection = () => {
                                 </div>
 
                                 <div className='flex flex-col gap-6'>
-                                    <p className='text-white group-hover:text-white text-lg transition-colors duration-500'>
+                                    <p className='text-white group-hover:text-white text-lg transition-colors duration-500 min-h-[84px]'>
                                         {ethos.description}
                                     </p>
                                     <Link
-                                        href="/apply"
-                                        className='flex flex-row items-center gap-2 font-semibold text-white group-hover:text-white transition-colors duration-500 '
+                                        href={appConfig.APPLICATION_FORM_LINK}
+                                        target='_blank'
+                                        className='flex flex-row items-center gap-2 font-semibold text-white group-hover:text-white transition-colors duration-500'
                                     >
-                                        Apply Now <MdOutlineArrowOutward className='text-xl' />
+                                        Apply Now <MdOutlineArrowOutward className='text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1' />
                                     </Link>
                                 </div>
                             </div>
