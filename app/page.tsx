@@ -7,6 +7,7 @@ import PortfolioSection from "@/sections/PortfolioSection";
 import Footer from "@/components/Footer";
 import ContactUs from "@/sections/ContactUs";
 import InvestmentFocusSection from "@/sections/InvestmentFocusSection";
+import TeamSection from "@/sections/TeamSection";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <InvestmentFocusSection />
 
       <PortfolioSection />
+
+      <TeamSection/>
 
       <ContactUs />
 
