@@ -12,7 +12,7 @@ const ContactUs = () => {
 
             <div className='md:w-[40%] w-full  max-md:h-[300px]  bg-gray-100 rounded-lg'>
 
-                <Image src="https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg" alt="contact" width={1000} height={1000} className='w-full h-full object-cover' />
+                <Image src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg" alt="contact" width={1000} height={1000} className='w-full h-full object-cover' />
 
             </div>
 

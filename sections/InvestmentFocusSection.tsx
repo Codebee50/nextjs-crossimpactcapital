@@ -31,10 +31,8 @@ const InvestmentFocusSection = () => {
     ]
 
     return (
-        <div className='w-full min-h-screen pt-[100px] relative section-con padding-x' id="investment-focus">
-            <div>
-
-            </div>
+        <div className='w-full min-h-screen pt-[50px] relative section-con padding-x' id="investment-focus">
+            
             <h2 className='text-center text-4xl font-bold mb-4'>Our Investment Focus</h2>
             <p className='text-center text-gray-500 max-w-xl mx-auto mb-16'>
                 Explore the key areas where we drive growth and create lasting value.

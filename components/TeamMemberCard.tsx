@@ -25,18 +25,18 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
 
     return (
         <>
-            <div className='flex flex-row gap-4'>
-                <Image src={urlFor(member.image).width(400).url()} alt={member.name} height={400} width={400} className='h-[230px] w-[200px] object-cover rounded-md' />
+            <div className='flex flex-col sm:flex-row gap-4'>
+                <Image src={urlFor(member.image).width(400).url()} alt={member.name} height={400} width={400} className='h-[400px] sm:h-[230px] w-full sm:w-[200px] object-cover object-center rounded-md shrink-0' />
                 <div className='flex flex-col gap-4 justify-between h-full'>
 
                     <div className='flex flex-col'>
-                        <p className='font-semibold'>{member.name}</p>
-                        <p className='text-senary text-sm'>{member.role}</p>
+                        <p className='font-semibold max-sm:text-lg'>{member.name}</p>
+                        <p className='text-senary sm:text-sm'>{member.role}</p>
                         <div className='mt-3 w-full h-[0.8px] bg-black/20 min-w-[200px]' />
                     </div>
 
                     <div>
-                        <p className='text-black/60 text-sm line-clamp-5'>{member.bio}</p>
+                        <p className='text-black/60 text-sm line-clamp-3'>{member.bio}</p>
                         <button
                             onClick={() => setModalOpen(true)}
                             className='text-sm text-black/40 hover:text-black/70 underline underline-offset-2 mt-1 transition-colors'

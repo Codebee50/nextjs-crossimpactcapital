@@ -41,7 +41,7 @@ const EthosSection = () => {
 
 
             <motion.div
-                className='flex flex-col md:flex-row md:items-center justify-center gap-5 mt-10'
+                className='flex flex-col md:flex-row md:items-center justify-center gap-5'
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }} // Ensure animation triggers only once
