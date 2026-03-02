@@ -3,24 +3,86 @@
 import { TeamMember } from '@/types/global'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { RiTwitterXLine } from "react-icons/ri";
-import { BsInstagram } from "react-icons/bs";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { MdPhoneAndroid } from "react-icons/md";
-import { IconType } from 'react-icons';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { urlFor } from '@/sanity/lib/image';
+
+import { RiTwitterXLine, RiSnapchatLine, RiDiscordLine, RiTelegramLine, RiWhatsappLine, RiYoutubeLine, RiSpotifyLine, RiPinterestLine, RiRedditLine, RiTwitchLine, RiGithubLine, RiDribbbleLine, RiBehanceLine, RiMediumLine, RiStackOverflowLine, RiSteamLine, RiPatreonLine, RiMastodonLine, RiSlackLine, RiSkypeLine, RiVimeoLine, RiTumblrLine, RiFacebookLine, RiThreadsLine, RiBlueskyLine, RiWechatLine, RiKakaoTalkLine, RiLineLine } from "react-icons/ri";
+import { BsInstagram, BsSignal, BsPaypal } from "react-icons/bs";
+import { FaLinkedinIn, FaTiktok, FaSoundcloud, FaBandcamp, FaEtsy, FaGoodreads, FaStrava, FaFlickr, FaDeviantart, FaXbox, FaPlaystation } from "react-icons/fa6";
+import { MdPhoneAndroid, MdEmail } from "react-icons/md";
+import { SiSubstack, SiNotion, SiFigma, SiGumroad, SiBuymeacoffee, SiKofi, SiLetterboxd, SiMyspace, SiCashapp, SiVenmo, SiFiverr, SiUpwork, SiHuggingface, SiDevdotto } from "react-icons/si";
+import { IconType } from 'react-icons';
+
+
+const icons: Record<string, IconType> = {
+    twitter: RiTwitterXLine,
+    x: RiTwitterXLine,
+    instagram: BsInstagram,
+    linkedin: FaLinkedinIn,
+    facebook: RiFacebookLine,
+    tiktok: FaTiktok,
+    youtube: RiYoutubeLine,
+    snapchat: RiSnapchatLine,
+    discord: RiDiscordLine,
+    telegram: RiTelegramLine,
+    whatsapp: RiWhatsappLine,
+    spotify: RiSpotifyLine,
+    pinterest: RiPinterestLine,
+    reddit: RiRedditLine,
+    twitch: RiTwitchLine,
+    github: RiGithubLine,
+    dribbble: RiDribbbleLine,
+    behance: RiBehanceLine,
+    medium: RiMediumLine,
+    stackoverflow: RiStackOverflowLine,
+    steam: RiSteamLine,
+    patreon: RiPatreonLine,
+    mastodon: RiMastodonLine,
+    slack: RiSlackLine,
+    skype: RiSkypeLine,
+    vimeo: RiVimeoLine,
+    tumblr: RiTumblrLine,
+    threads: RiThreadsLine,
+    bluesky: RiBlueskyLine,
+    wechat: RiWechatLine,
+    kakaotalk: RiKakaoTalkLine,
+    line: RiLineLine,
+    signal: BsSignal,
+    paypal: BsPaypal,
+    soundcloud: FaSoundcloud,
+    bandcamp: FaBandcamp,
+    etsy: FaEtsy,
+    goodreads: FaGoodreads,
+    strava: FaStrava,
+    flickr: FaFlickr,
+    deviantart: FaDeviantart,
+    xbox: FaXbox,
+    playstation: FaPlaystation,
+    substack: SiSubstack,
+    notion: SiNotion,
+    figma: SiFigma,
+    gumroad: SiGumroad,
+    buymeacoffee: SiBuymeacoffee,
+    kofi: SiKofi,
+    letterboxd: SiLetterboxd,
+    myspace: SiMyspace,
+    cashapp: SiCashapp,
+    venmo: SiVenmo,
+    fiverr: SiFiverr,
+    upwork: SiUpwork,
+    huggingface: SiHuggingface,
+    devto: SiDevdotto,
+    email: MdEmail,
+    phone: MdPhoneAndroid,
+}
 
 
 const TeamMemberCard = ({ member }: { member: TeamMember }) => {
     const [modalOpen, setModalOpen] = useState(false)
 
     const getSocialIcon = (platform: string): IconType => {
-        if (platform == 'twitter') return RiTwitterXLine
-        else if (platform === 'instagram') return BsInstagram
-        else if (platform === "linkedin") return FaLinkedinIn
-        return MdPhoneAndroid
+        return icons[platform.toLocaleLowerCase()] || MdPhoneAndroid
     }
 
     return (

@@ -71,10 +71,6 @@ const InvestmentFocusSection = () => {
 
                         </div>
 
-
-
-
-
                     </div>
                 ))}
             </div>
