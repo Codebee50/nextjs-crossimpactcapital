@@ -77,7 +77,7 @@ const HeroSection = () => {
                             Closing opportunity gaps <br /> across wealth and health.
                         </h1>
                         <p className='text-white opacity-70 max-w-[700px]'>
-                            Cross Impact Capital invests in category-defining startups. We invest where unmet needs and demographic shifts unlock outsized opportunities to expand access across wealth and health
+                        Cross Impact invests in category-redefining startups where unmet needs and demographic shifts unlock outsized opportunities to expand access in wealth and health.
                         </p>
 
                         <div className='h-[90px]'>

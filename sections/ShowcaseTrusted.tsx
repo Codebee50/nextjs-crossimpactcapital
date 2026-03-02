@@ -16,8 +16,13 @@ const ShowcaseTrusted = () => {
                             className="slide shrink-0 cursor-pointer"
                             key={`marquee-${index}`}
                         >
-                            <Image src={client.image} alt={client.name} width={190} height={100} className='grayscale max-sm:w-[130px]' />
-
+                            <Image
+                                src={client.image}
+                                alt={client.name}
+                                width={190}
+                                height={100}
+                                className="grayscale hover:grayscale-0 transition duration-300 ease-in-out max-sm:w-[130px]"
+                            />
                         </a>
                     ))}
                 </div>

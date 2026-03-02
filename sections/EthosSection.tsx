@@ -14,7 +14,7 @@ const EthosSection = () => {
     const ethos = [
         {
             title: "Innovation Focus",
-            description: "Supporting solutions in financial and healthcare services closing opportunity gaps",
+            description: "Supporting solutions in financial and healthcare services.",
             Icon: RiFocus2Fill,
             backgroundImage: "/images/ethos/1.jpg"
         },
@@ -100,7 +100,7 @@ const EthosSection = () => {
                                 </div>
 
                                 <div className='flex flex-col gap-6'>
-                                    <p className='text-white group-hover:text-white text-lg transition-colors duration-500 min-h-[84px]'>
+                                    <p className='text-white group-hover:text-white text-lg transition-colors duration-500 min-h-[65px]'>
                                         {ethos.description}
                                     </p>
                                     <Link

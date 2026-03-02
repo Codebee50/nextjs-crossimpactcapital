@@ -26,7 +26,7 @@ const PortfolioSection = () => {
     }
 
     return (
-        <div className='w-full bg-blue-50 py-15 md:py-30'>
+        <div className='w-full bg-blue-50 py-15 md:py-20'>
             <div id="portfolio" className='w-full  section-con padding-x flex flex-col  gap-5  scroll-mt-[100px]'>
                 <div className='flex flex-col md:flex-row md:items-center justify-between gap-4'>
                     <div className='flex flex-col '>

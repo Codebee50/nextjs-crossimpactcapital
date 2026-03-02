@@ -19,7 +19,7 @@ const InvestmentFocusSection = () => {
         },
         {
             title: "Typical Investment Size",
-            description: "Our average check size is $250-$500k. We do reserve capital for follow-on.",
+            description: "Our average check size is $250-$500k.\n We do reserve capital for follow-on.",
             image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200",
         },
         {
@@ -31,8 +31,8 @@ const InvestmentFocusSection = () => {
     ]
 
     return (
-        <div className='w-full min-h-screen pt-[50px] relative section-con padding-x' id="investment-focus">
-            
+        <div className='w-full  pt-[10px] relative section-con padding-x' id="investment-focus">
+
             <h2 className='text-center text-4xl font-bold mb-4'>Our Investment Focus</h2>
             <p className='text-center text-gray-500 max-w-xl mx-auto mb-16'>
                 Explore the key areas where we drive growth and create lasting value.
@@ -53,7 +53,7 @@ const InvestmentFocusSection = () => {
                             className='w-full h-full max-h-[500px] object-cover'
                         />
 
-                        <div className='absolute inset-0 bg-black/60 flex flex-col justify-between sm:p-10 p-8'>
+                        <div className='absolute inset-0 bg-black/60 flex flex-col justify-between sm:p-10 p-5'>
 
                             <div className='bg-white text-black rounded-full p-2 w-max'>
                                 <h3 className='text-lg sm:text-2xl md:text-3xl font-semibold '>{index + 1}</h3>
@@ -61,10 +61,10 @@ const InvestmentFocusSection = () => {
 
                             <div className=' text-white max-w-lg'>
                                 <div className='flex items-stretch gap-4'>
-                                    <div className='w-1 bg-white rounded-full' />
+                                    <div className='sm:w-[2.5px] w-[2px] bg-white rounded-full shrink-0' />
                                     <div>
                                         <h3 className='text-lg sm:text-2xl md:text-3xl font-semibold mb-2'>{item.title}</h3>
-                                        <p className='text-sm md:text-base text-white/80'>{item.description}</p>
+                                        <p className='text-sm md:text-base text-white/80 whitespace-pre-line'>{item.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ const InvestmentFocusSection = () => {
             </div>
 
             {/* Final content section that scrolls over the last image */}
-            <div className='relative bg-white py-24 text-center flex flex-col items-center justify-center' style={{ zIndex: investments.length + 1 }}>
+            <div className='relative bg-white pt-15 text-center flex flex-col items-center justify-center' style={{ zIndex: investments.length + 1 }}>
                 <h2 className='text-3xl font-bold'>Ready to Get Started?</h2>
                 <p className='text-gray-500 mt-4'>Lets build something great together.</p>
 

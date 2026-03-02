@@ -22,7 +22,7 @@ const ContactUs = () => {
                 <form action="" className='w-full md:mt-[70px] mt-[40px] flex flex-col gap-10'>
                     <div className='w-full grid sm:grid-cols-2 md:gap-4 gap-10'>
 
-                        <TextInput label="Fullname*" />
+                        <TextInput label="Full name*" />
                         <TextInput label="Email*" />
 
 

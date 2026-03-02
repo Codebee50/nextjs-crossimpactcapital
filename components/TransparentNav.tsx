@@ -78,7 +78,7 @@ export const TransparentNav = () => {
                         <Image src="/logoshort.svg" alt="logo" width={30} height={30} className={`${scrolled ? '' : 'invert-100'}`} />
                     </div>
 
-                    <p className={`sm:text-lg font-semibold font-open-sauce ${scrolled ? 'text-black' : 'text-white'}`}>CrossImpact</p>
+                    <p className={`sm:text-lg font-semibold font-open-sauce ${scrolled ? 'text-black' : 'text-white'}`}>Cross Impact Capital</p>
                 </div>
 
                 <div className='hidden lg:flex flex-row items-center gap-8 '>
