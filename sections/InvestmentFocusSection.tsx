@@ -25,7 +25,7 @@ const InvestmentFocusSection = () => {
         {
             title: "Geographic Focus",
             description: "We invest in companies based in the U.S.",
-            image: "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: "/images/new-boston.jpg",
             // image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=1200",
         }
     ]

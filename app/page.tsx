@@ -24,7 +24,7 @@ export default function Home() {
 
       <PortfolioSection />
 
-      <TeamSection/>
+      {/* <TeamSection/> */}
 
       <ContactUs />
 
